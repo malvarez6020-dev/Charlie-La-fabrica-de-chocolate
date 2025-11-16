@@ -1,0 +1,860 @@
+@font-face {
+    font-family: 'CheGuevara';
+    /* Este es el "apodo" que le damos */
+    src: url('fonts/CheGuevaraChocolateFactory-Regular.ttf') format('truetype');
+    /* Ruta al archivo */
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'GillSans';
+    /* El "apodo" para Gill Sans */
+    src: url('fonts/GillSans.otf') format('opentype');
+    /* Ruta al archivo */
+    font-weight: normal;
+}
+
+body {
+    font-family: 'GillSans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #260A0A;
+    color: #FFF8E1;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Encabezado (Header) --- */
+header {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom: 3px solid #FFD700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 120px;
+    z-index: 200;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+    display: block;
+}
+
+/* Contenedor del título y la ilustración (ocultos) */
+.header-content,
+.main-illustration,
+header h1,
+.chocolate-wave {
+    display: none;
+}
+
+/* --- Barra de Navegación (Botones) --- */
+nav {
+    position: relative;
+    width: auto;
+    padding: 0;
+    text-align: right;
+    z-index: 100;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #3E2723;
+    padding: 10px 18px;
+    margin: 0 0 0 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-family: 'GillSans', sans-serif;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.boton:hover {
+    background-color: #FFF8E1;
+    color: #4E342E;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* --- Sección Hero --- */
+.hero-section {
+    height: 56.25vw;
+    /* Proporción 16:9 */
+    max-height: 90vh;
+    width: 100%;
+    position: relative;
+    background-image: url('images/seccion-12.png');
+    /* Asegúrate de que esta es tu imagen 16:9 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #260A0A;
+}
+
+
+/* --- Contenido Principal (Main) --- */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    position: relative;
+    background-color: transparent;
+    margin-top: 0;
+}
+
+/* --- Estilos de secciones transparentes --- */
+#inicio,
+.content-section,
+.full-width-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding: 2rem;
+
+    background-color: transparent;
+    /* Fondo transparente */
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    z-index: 10;
+    border: none;
+
+    border-bottom: 2px dashed rgba(255, 215, 0, 0.3);
+    /* Separador dorado sutil */
+}
+
+#inicio {
+    margin-top: 0;
+}
+
+
+.full-width-section,
+#inicio {
+    text-align: center;
+}
+
+#inicio {
+    text-align: left;
+}
+
+.content-section {
+    text-align: center;
+}
+
+
+h2.section-title {
+    font-family: 'CheGuevara', cursive;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #FFD700;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    position: relative;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+h2.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #FFD700;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+.left-column h2 {
+    font-family: 'CheGuevara', cursive;
+    font-weight: 700;
+    color: #FFD700;
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-align: left;
+}
+
+.image-card {
+    background-color: #4E342E;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    border: 3px solid #FFD700;
+}
+
+/* --- Estilos para el Video --- */
+.video-container {
+    position: relative;
+    background-color: #3E2723;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid #FFD700;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 500px;
+    /* Puedes ajustar esta altura */
+    display: block;
+    border-radius: 5px;
+}
+
+
+/* --- Noticias --- */
+.news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.news-item {
+    background-color: #4E342E;
+    color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 350px;
+    text-align: left;
+}
+
+.news-item h3 {
+    color: #FFD700;
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #FFD700;
+}
+
+.news-item p {
+    font-size: 0.95rem;
+    color: #FFF;
+    flex-grow: 1;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #3E2723;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+    font-family: 'GillSans', sans-serif;
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+.read-more:hover {
+    background-color: #FFF8E1;
+}
+
+/* --- Personajes --- */
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.character-card {
+    background-color: #4E342E;
+    color: #FFF8E1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.character-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #FFD700;
+    margin-bottom: 15px;
+}
+
+.character-card h3 {
+    color: #FFD700;
+    font-size: 1.8rem;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+/* --- Sección del Golden Ticket --- */
+.golden-ticket-section {
+    background-color: transparent;
+    /* Fondo oscuro */
+    padding: 4rem 1rem 0;
+    /* Espacio arriba para el ticket, padding lateral, 0 abajo */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Para que la imagen de decoración no se desborde */
+    /* ¡CAMBIO AQUÍ! Reducimos el margen superior para acercarlo */
+    margin-top: 2rem;
+    /* Antes era 4rem */
+}
+
+.golden-ticket-img {
+    max-width: 50%;
+    /* Ancho máximo para el ticket */
+    width: 90%;
+    /* Se adapta al ancho de la pantalla */
+    height: auto;
+    display: block;
+    /* ¡CAMBIO AQUÍ! Reducimos el margen inferior */
+    margin: 0 auto 0.5rem;
+    /* Antes era 1rem */
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+    /* Resplandor dorado */
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #E2445A;
+    /* Un rojo más oscuro y cálido */
+    color: #FFF;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 6rem;
+    /* Margen inferior antes de la decoración */
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.buy-button:hover {
+    background-color: #C73B4D;
+    /* Rojo más oscuro al pasar el ratón */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Imagen decorativa del footer --- */
+.footer-decor-img {
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 350px;
+    /* Ajusta esta altura según tu imagen de decoración */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    /* Asegura que esté detrás del contenido del footer */
+}
+
+
+/* --- Pie de Página (Footer) --- */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #4E342E;
+    /* Fondo de chocolate oscuro */
+    color: #FFD700;
+    font-size: 0.9rem;
+    border-top: 5px solid #FFD700;
+    display: flex;
+    /* ¡CAMBIO AQUÍ! Centramos todos los elementos del footer */
+    justify-content: center;
+    /* Centra el grupo de elementos */
+    align-items: center;
+    /* Alinea verticalmente */
+    flex-wrap: wrap;
+    /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    position: relative;
+    /* Para que la decoración de abajo no lo tape */
+    z-index: 2;
+    /* Asegura que el footer esté encima de la decoración */
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra los enlaces dentro de su columna */
+    /* ¡CAMBIO AQUÍ! Permitimos que crezca para empujar el logo al centro */
+    flex-grow: 1;
+    /* Permite que ocupe el espacio disponible */
+    flex-shrink: 1;
+    /* Se encoge si es necesario */
+    /* min-width: 150px; Quitamos el min-width para mayor flexibilidad */
+    text-align: center;
+    /* Centra el texto de los enlaces */
+    margin-right: 20px;
+    /* Un poco de margen para separar del logo */
+}
+
+.footer-links a {
+    color: #FFF8E1;
+    /* Un color más suave para los enlaces */
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFD700;
+}
+
+.footer-logo {
+    /* ¡CAMBIO AQUÍ! También le damos flex-grow para que el espacio se reparta */
+    flex-grow: 1;
+    /* Permite que ocupe el espacio disponible */
+    flex-shrink: 0;
+    /* No se encoge si hay espacio, pero puede si lo necesita */
+    text-align: center;
+    padding: 0 1rem;
+    /* margin: 0 2rem; Quitamos el margen lateral, flex-grow lo manejará */
+}
+
+.footer-logo img {
+    max-width: 100px;
+    /* Tamaño del logo en el footer */
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    .boton {
+        margin: 5px;
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+    .hero-section {
+        height: 56.25vw;
+    }
+
+    #inicio,
+    .content-section {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .left-column,
+    .right-column {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .video-container iframe {
+        height: 400px;
+    }
+
+    /* Footer en móviles */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;
+    }
+
+    .footer-links {
+        margin-bottom: 1rem;
+        order: 2;
+        margin-right: 0;
+        /* Quitamos el margen derecho en móvil */
+    }
+
+    .footer-logo {
+        order: 1;
+        margin-bottom: 1rem;
+        margin: 0;
+    }
+
+    .footer-decor-img {
+        height: 250px;
+    }
+
+    .golden-ticket-img {
+        margin-bottom: 1rem;
+        /* Mantenemos el margen más pequeño en móvil */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+
+    nav {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+        width: 100%;
+    }
+
+    .boton {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+
+    h2.section-title {
+        font-size: 2rem;
+    }
+
+    .hero-section {
+        height: 56.25vw;
+    }
+
+    .video-container iframe {
+        height: 250px;
+    }
+
+    .footer-decor-img {
+        height: 200px;
+    }
+}
+
+/* --- Modal (Pop-up) del Boleto Dorado --- */
+.modal {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    /* Posición fija en la pantalla */
+    z-index: 2000;
+    /* Siempre encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Permite scroll si el contenido es muy grande */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro semitransparente */
+    display: flex;
+    /* Para centrar el contenido */
+    justify-content: center;
+    /* Centrado horizontal */
+    align-items: center;
+    /* Centrado vertical */
+    opacity: 0;
+    /* Empieza transparente para la animación */
+    transition: opacity 0.3s ease-in-out;
+    /* Transición de opacidad */
+    pointer-events: none;
+    /* No permite interacciones cuando está oculto */
+}
+
+.modal.active {
+    opacity: 1;
+    /* Se vuelve visible */
+    pointer-events: auto;
+    /* Permite interacciones */
+}
+
+.modal-content {
+    background-color: #4E342E;
+    /* Fondo de chocolate oscuro */
+    margin: auto;
+    /* Para centrar si no usamos flex */
+    padding: 30px;
+    border: 5px solid #FFD700;
+    /* Borde dorado */
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    position: relative;
+    color: #FFF8E1;
+    transform: translateY(-50px);
+    /* Empieza un poco arriba */
+    opacity: 0;
+    /* Empieza transparente */
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    /* Animación de entrada */
+}
+
+.modal.active .modal-content {
+    transform: translateY(0);
+    /* Se desliza a su posición */
+    opacity: 1;
+    /* Se vuelve visible */
+}
+
+.close-button {
+    color: #FFD700;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-title {
+    font-family: 'CheGuevara', cursive;
+    color: #FFD700;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.modal-message {
+    font-family: 'GillSans', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.modal-message .highlight {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.modal-details {
+    font-family: 'GillSans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+.modal-ticket-img {
+    max-width: 250px;
+    width: 80%;
+    margin: 20px auto 25px;
+    border: 3px solid #FFD700;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+.modal-ok-button {
+    background-color: #E2445A;
+    /* Tu color de botón de acción */
+    color: #FFF;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'GillSans', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.modal-ok-button:hover {
+    background-color: #C73B4D;
+    transform: translateY(-2px);
+}
+
+/* Responsividad para el modal */
+@media (max-width: 480px) {
+    .modal-title {
+        font-size: 2.2rem;
+    }
+
+    .modal-message {
+        font-size: 1.2rem;
+    }
+
+    .modal-details {
+        font-size: 0.95rem;
+    }
+
+    .modal-ticket-img {
+        max-width: 180px;
+    }
+
+    .modal-ok-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .close-button {
+        font-size: 30px;
+        right: 15px;
+    }
+}
+
+/* --- ESTILOS DE PRODUCTOS (AÑADIR AL FINAL DE TU style.css) --- */
+
+#productos {
+    /* Le damos un poco más de espacio superior en la página de productos
+       porque no tiene la sección .hero-section */
+    padding-top: 150px;
+    /* Ajusta este valor si el header se superpone */
+}
+
+.product-grid {
+    display: grid;
+    /* Crea una cuadrícula responsiva */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    /* Espacio entre tarjetas */
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background-color: #4E342E;
+    /* Mismo color que las tarjetas de personajes */
+    color: #FFF8E1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    /* Alinea el contenido en columna */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    /* Altura fija para las imágenes */
+    object-fit: cover;
+    /* Asegura que la imagen cubra el espacio sin deformarse */
+    border-radius: 5px;
+    border: 3px solid #FFD700;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    color: #FFD700;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 0.95rem;
+    flex-grow: 1;
+    /* Hace que el texto ocupe el espacio, empujando el botón hacia abajo */
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.product-buy-btn {
+    display: block;
+    width: 100%;
+    background-color: #FFD700;
+    /* Mismo estilo que .read-more */
+    color: #3E2723;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'GillSans', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.product-buy-btn:hover {
+    background-color: #FFF8E1;
+    transform: scale(1.02);
+}
+
+
+/* --- FIN DE LOS NUEVOS ESTILOS --- */

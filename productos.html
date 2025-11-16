@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Charlie y la Fábrica de Chocolate</title>
+    <!-- Se enlaza el MISMO style.css para reutilizar los estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Reutilizamos el encabezado, pero cambiamos los enlaces -->
+    <header>
+        <div class="logo">
+            <!-- Usamos index.html para que el logo siempre te lleve al inicio -->
+            <a href="index.html">
+                <img src="images/logo.png" alt="Logo Charlie y la Fábrica de Chocolate">
+            </a>
+        </div>
+        <nav>
+            <!-- Los enlaces ahora apuntan a index.html y sus secciones -->
+            <a href="index.html#inicio" class="boton">INICIO</a>
+            <a href="index.html#galeria" class="boton">GALERÍA</a>
+            <a href="index.html#noticias" class="boton">NOTICIAS</a>
+            <a href="index.html#personajes" class="boton">PERSONAJES</a>
+            <a href="productos.html" class="boton">PRODUCTOS</a> <!-- Este es el enlace activo -->
+        </nav>
+    </header>
+
+    <!-- La sección hero no es necesaria aquí, vamos directo al main -->
+
+    <main>
+        <section id="productos" class="content-section">
+            <h2 class="section-title">Nuestros Productos</h2>
+
+            <div class="product-grid">
+
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <img src="images/barra-wonka.png" alt="Barra Wonka Clásica">
+                    <h3>Barra Wonka Clásica</h3>
+                    <p>La original. Chocolate con leche cremoso que te transportará a un mundo de imaginación.</p>
+                    <span class="product-price">$ 4.99</span>
+                    <button class="product-buy-btn">Comprar</button>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <img src="images/reloj-wonka.png" alt="Reloj Wonka">
+                    <h3>Reloj Wonka</h3>
+                    <p>Luce todas las horas del dia con este reloj mágico inspirado en la fábrica.</p>
+                    <span class="product-price">$ 15.00</span>
+                    <button class="product-buy-btn">Comprar</button>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <img src="images/billetera-wonka.png" alt="Billetera Wonka">
+                    <h3>Billetera Wonka</h3>
+                    <p>Una billetera elegante y mágica para guardar tus monedas de oro Wonka.</p>
+                    <span class="product-price">$ 10.00</span>
+                    <button class="product-buy-btn">Comprar</button>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <img src="images/lentes-wonka.png" alt="lentes de willie wonka">
+                    <h3>Lentes de Willie Wonka</h3>
+                    <p>Lucen como los que usaba Willie Wonka en la película clásica.</p>
+                    <span class="product-price">$ 8.50</span>
+                    <button class="product-buy-btn">Comprar</button>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="product-card">
+                    <img src="images/funko-wonka.png" alt="Funko Wonka">
+                    <h3>Funko Wonka</h3>
+                    <p>Figuras coleccionables de los personajes más icónicos de la fábrica.</p>
+                    <span class="product-price">$ 25.00</span>
+                    <button class="product-buy-btn">Comprar</button>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="product-card">
+                    <img src="images/taza-wonka.png" alt="Taza Wonka">
+                    <h3>Taza Wonka</h3>
+                    <p>Bebe tu chocolate caliente en esta taza mágica inspirada en la fábrica.</p>
+                    <span class="product-price">$ 6.99</span>
+                    <button class="product-buy-btn">Comprar</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Reutilizamos el mismo pie de página -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Políticas de privacidad</a>
+            <a href="#">Términos de uso</a>
+        </div>
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Charlie Chocolate Factory Logo">
+        </div>
+    </footer>
+
+</body>
+
+</html>
